@@ -16,6 +16,9 @@
 				<p><b>Controls:</b></p>
 			</th>
             <th>
+                <p><b>High Score:</b></p>
+            </th>
+            <th>
                 <p><b>How to Play:</b></p>
             </th>
 		</tr>
@@ -23,6 +26,9 @@
 			<th>
 				<button id="controlsBTN">Show Controls</button>
 			</th>
+            <th>
+                <span id="highscore">N/A</span>
+            </th>
             <th>
                 <button id="howtoplayBTN">Show How to Play</button>
             </th>
@@ -36,13 +42,15 @@
     </dialog>
     <dialog id="howtoplay" align="middle">
         <h3>How to Play</h3>
-        Get as close as you can to <b>one second.</b> The timer is organized in this order:
+        Get as close as you can to <b>one second.</b> The timer automatically stops at two seconds.<br>The timer is organized in this order:
         <br><br>
-        min:sec:millisecond
+        minutes : seconds : milliseconds
         <br><br>
         You can check the controls for how to start/stop the timer. You can also see
         <br>
-        your high score below the title 'Second Game'.
+        your high score next to the controls. The score once you stop the timer is your
+        <br>
+        current score.
         <br><br>
         <button onclick="document.getElementById('howtoplay').close()">Close</button>
     </dialog>
