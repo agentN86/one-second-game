@@ -19,6 +19,14 @@ document.getElementById('howtoplayBTN').onclick = function() {
     document.getElementById('howtoplay').showModal()
 }
 
+document.getElementById('gamesBTN').onclick = function() {
+    if (document.getElementById('gamesTableTH').style.display === "table-row") {
+        document.getElementById('gamesTableTH').style.display = "none"
+    } else {
+        document.getElementById('gamesTableTH').style.display = "table-row"
+    }
+}
+
 function highscoreCalc() {
     var score = NaN
 
