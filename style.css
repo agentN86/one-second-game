@@ -1,0 +1,19 @@
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+.agentn86:hover {
+	text-decoration:none;
+}
+
+table {
+	margin: auto;
+}
+
+#timer {
+    width: 30vw;
+    height: 20vh;
+    font-size: larger;
+    font-weight: bold;
+}
