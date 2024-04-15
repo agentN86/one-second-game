@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="./style.css" rel="stylesheet">
     <title>Second Game</title>
 </head>
-<body>
+<body oncontextmenu="return false;">
     <h1>Second Game</h1>
     <button id="timer">0:00:000</button>
     <br><br>
@@ -53,6 +53,11 @@
         current score.
         <br><br>
         <button onclick="document.getElementById('howtoplay').close()">Close</button>
+    </dialog>
+    <dialog id="newhighscore" align="middle">
+        <audio id="winSFX"><source type="audio/mp3" src="./win.mp3"></audio>
+        <h3>New High Score!</h3>
+        <button onclick="document.getElementById('newhighscore').close()">Close</button>
     </dialog>
     <script src="./script.js"></script>
 </body>

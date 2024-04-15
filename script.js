@@ -30,6 +30,9 @@ function highscoreCalc() {
             highscore = score
             document.getElementById('highscore').innerText = "-" + highscore
             document.getElementById('highscore').style.color = "red"
+
+            document.getElementById('newhighscore').showModal()
+            document.getElementById('winSFX').play()
         }
     } else {
 
@@ -40,6 +43,9 @@ function highscoreCalc() {
             highscore = score
             document.getElementById('highscore').innerText = "+" + highscore
             document.getElementById('highscore').style.color = "green"
+
+            document.getElementById('newhighscore').showModal()
+            document.getElementById('winSFX').play()
         }
 
     }
