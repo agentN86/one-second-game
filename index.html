@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>Second Game</title>
+</head>
+<body>
+    <h1>Second Game</h1>
+    <p><b>Current: </b><span style="color: red;">-10</span></p>
+    <button id="timer">0:00:000</button>
+    <br><br>
+    <table>
+		<tr>
+			<th>
+				<p><b>Controls:</b></p>
+			</th>
+            <th>
+                <p><b>How to Play:</b></p>
+            </th>
+		</tr>
+		<tr>
+			<th>
+				<button id="controlsBTN">Show Controls</button>
+			</th>
+            <th>
+                <button id="howtoplayBTN">Show How to Play</button>
+            </th>
+		</tr>
+	</table>
+    <dialog id="controls" align="middle">
+        <h3>Controls</h3>
+        To start/stop the timer, you can <b>click the timer</b> or use <b>ENTER/SPACE.</b>
+        <br><br>
+        <button onclick="document.getElementById('controls').close()">Close</button>
+    </dialog>
+    <dialog id="howtoplay" align="middle">
+        <h3>How to Play</h3>
+        Get as close as you can to <b>one second.</b> The timer is organized in this order:
+        <br><br>
+        min:sec:millisecond
+        <br><br>
+        You can check the controls for how to start/stop the timer. You can also see
+        <br>
+        your high score below the title 'Second Game'.
+        <br><br>
+        <button onclick="document.getElementById('howtoplay').close()">Close</button>
+    </dialog>
+    <script src="./script.js"></script>
+</body>
+</html>
