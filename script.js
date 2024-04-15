@@ -1,4 +1,6 @@
 var milliseconds = 0
+var total_milliseconds = 0
+var highscore = 2000
 var seconds = 0
 var watergate = false
 
@@ -17,8 +19,35 @@ document.getElementById('howtoplayBTN').onclick = function() {
     document.getElementById('howtoplay').showModal()
 }
 
+function highscoreCalc() {
+    var score = NaN
+
+    if (total_milliseconds <= 1000) {
+        score = 1000 + -total_milliseconds
+        document.getElementById('timer').innerText = document.getElementById('timer').innerText + " (-" + score + ")"
+
+        if (score < highscore) {
+            highscore = score
+            document.getElementById('highscore').innerText = "-" + highscore
+            document.getElementById('highscore').style.color = "red"
+        }
+    } else {
+
+        score = total_milliseconds - 1000
+        document.getElementById('timer').innerText = document.getElementById('timer').innerText + " (+" + score + ")"
+        
+        if (score < highscore) {
+            highscore = score
+            document.getElementById('highscore').innerText = "+" + highscore
+            document.getElementById('highscore').style.color = "green"
+        }
+
+    }
+}
+
 var countdown = setInterval(function() {
     milliseconds += 1
+    total_milliseconds += 1
     if (milliseconds >= 1000) {
         seconds += 1
         milliseconds = 0
@@ -30,7 +59,8 @@ var countdown = setInterval(function() {
 
         if (seconds >= 2) {
             watergate = false
-            document.getElementById('timer').innerText = "0:02:000"
+            document.getElementById('timer').innerText = "0:02:000 (+1000)"
+            highscoreCalc()
         }
     }
 },1)
@@ -38,9 +68,11 @@ var countdown = setInterval(function() {
 document.getElementById('timer').onclick = function() {
     if (watergate == true) {
         watergate = false
+        highscoreCalc()
     } else {
         seconds = 0
         milliseconds = 0
+        total_milliseconds = 0
         watergate = true
     }
     
