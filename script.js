@@ -3,6 +3,7 @@ var total_milliseconds = 0
 var highscore = 2000
 var seconds = 0
 var watergate = false
+// adding a comment here so github can be a good person and actually make it work
 
 document.addEventListener('keydown', (keyboardEvent) => {
     if (keyboardEvent.key === "Enter" || keyboardEvent.key === " ") {
