@@ -18,6 +18,8 @@ table {
     font-weight: bold;
 }
 
+/* agents classic games table thing */
+
 .gamesTable {
     border: 1px solid black;
     border-collapse: collapse;
@@ -25,29 +27,36 @@ table {
 
 caption {
     padding: 6px;
+    background-color: #4dd0ea;
     text-align: center;
     font-weight: bold;
     font-size: 15px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    border-left: 1px solid black; /* Added */
-    border-right: 1px solid black; /* Added */
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
-#gamesTableTH th {
+.gamesTableTH th {
     padding: 10px;
-    text-align: left;
+    text-align: middle;
     border-bottom: 1px solid black;
-    border-right: 1px solid black; /* Added */
+    border-right: 1px solid black;
 }
 
-#gamesTableTH th:first-child {
+.gamesTableTH th:first-child {
     border-left: 1px solid black;
 }
 
-#gamesTableTH th:last-child {
+.gamesTableTH th:last-child {
     border-right: 1px solid black; /* Added border to last column */
 }
+
+.shader {
+    background-color: #e0f7fa;
+}
+
+/*                                 */
 
 a {
 	color: black;
@@ -56,4 +65,8 @@ a {
 
 a:hover {
 	text-decoration: none;
+}
+
+button {
+    cursor: pointer;
 }

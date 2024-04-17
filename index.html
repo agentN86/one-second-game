@@ -29,6 +29,7 @@
 			</th>
             <th>
                 <span id="highscore">N/A</span>
+                <span id="onesecondH" style="display: none"><span style="color:#FF4D4D">0 </span> <span style="color:#FF994D">m</span><span style="color:#FFE54D">i</span><span style="color:#CCFF4D">l</span><span style="color:#7FFF4D">l</span><span style="color:#4DFF66">i</span><span style="color:#4DFFB3">s</span><span style="color:#4DFFFF">e</span><span style="color:#4DB3FF">c</span><span style="color:#4D66FF">o</span><span style="color:#804DFF">n</span><span style="color:#CC4DFF">d</span><span style="color:#FF4DE6">s</span><span style="color:#FF4D99">!</span></span>
             </th>
             <th>
                 <button id="howtoplayBTN">Show How to Play</button>
@@ -39,9 +40,13 @@
     <table class="gamesTable">
         <caption><button id="gamesBTN" style="width: 100%; cursor: pointer; background-color: transparent; border: 0;">GAMES</button></caption>
         <thead>
-            <tr id="gamesTableTH" style="display: table-row;">
+            <tr class="gamesTableTH" class="gamesTableHide" style="display: table-row;" align="middle">
                 <th><a href="https://agentn86.github.io/js-minesweeper">Minesweeper</a></th>
                 <th><a href="https://agentn86.github.io/one-second-game">One Second Game</a></th>
+            </tr>
+            <tr class="gamesTableTH shader" align="middle">
+                <th><a>Story Maker</a></th>
+                <th><i>Coming Soon!</i></th>
             </tr>
         </thead>
     </table>
@@ -63,13 +68,22 @@
         your high score next to the controls. The score once you stop the timer is your
         <br>
         current score.
+        <h4>Score</h4>
+        Depending on your score's postivity or negativity, your score does not differ in any way.<br>
+        Your score is calculated using a simple function. If your score was under 1 second, the formula would be<br><b>score = 1000 + -milliseconds</b>.
+        If your score was over one second, the formula would be <b>score = milliseconds - 1000</b>.
         <br><br>
         <button onclick="document.getElementById('howtoplay').close()">Close</button>
     </dialog>
     <dialog id="newhighscore" align="middle">
-        <audio id="winSFX"><source type="audio/mp3" src="./win.mp3"></audio>
+        <audio id="winSFX"><source type="audio/mp3" src="./ding.mp3"></audio>
         <h3>New High Score!</h3>
         <button onclick="document.getElementById('newhighscore').close()">Close</button>
+    </dialog>
+    <dialog id="onesecondwin" align="middle">
+        <audio id="tadaSFX"><source type="audio/mp3" src="./tada.mp3"></audio>
+        <h3>You got ONE SECOND!!</h3>
+        <button onclick="document.getElementById('onesecondwin').close()">Close</button>
     </dialog>
     <script src="./script.js"></script>
 </body>
